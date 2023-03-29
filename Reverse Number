@@ -1,13 +1,25 @@
-#=====Reverse Number=====
+#include <stdio.h>
+#include <limit.h>
 
-int reverse(int x){
-    
-    int sum = 0;
-    
-    while(x){
-        sum = sum * 10 + x % 10;
-        x /= 10;
-    }
+long long reverse_number(int num) {
 
-    return sum;
+	long long sum = 0;
+
+	while (num) {
+		sum = sum * 10 + num % 10;
+		num /= 10;
+	}
+
+	return sum;
+
+}
+
+
+
+int main() {
+	
+    // Test Code
+	for (int i = 1000000000; i < INT_MAX; i++)
+			printf("%d --> %lld\n",i, reverse_number(i));
+
 }
