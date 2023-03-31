@@ -1,0 +1,19 @@
+/* Çok basamaklı bir sayının 3'e kalansız bölünüp bölünmediğini kontrol etme */
+
+
+void division_by_three(void) {
+
+	printf("Enter a number here: ");
+
+	int c;
+	int sum = 0;
+
+	while ((c = getchar()) != '\n' && c != EOF)
+		sum += c - '0';
+
+	if (sum % 3)
+		printf("Not divided by Three\n");
+	else
+		printf("Divided by Three\n");
+
+}
